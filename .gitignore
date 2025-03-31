@@ -1,0 +1,12 @@
+  # Ignorar dependências
+   **/target/
+   **/node_modules/
+   **/__pycache__/
+
+   # Ignorar arquivos temporários
+   *.log
+   *.tmp
+
+   # Ignorar IDE-specific files
+   .vscode/
+   .idea/

@@ -1,0 +1,338 @@
+{
+	"info": {
+		"_postman_id": "8d391bbb-6408-4385-94b5-088162542b34",
+		"name": "Busca de Operadoras",
+		"description": "Esta é uma API REST desenvolvida em Python com Flask que realiza buscas textuais em um arquivo CSV contendo cadastros de operadoras.  \nA API suporta consultas nos campos 'Razao_Social', 'Nome_Fantasia' e 'CNPJ'.\n\n## Funcionalidades\n\n- Busca por nome ou parte do nome da operadora.\n    \n- Busca por CNPJ.\n    \n- Retorna resultados relevantes em formato JSON.\n    \n\n## Como Usar\n\nEnvie uma requisição GET para `/search?q=`, onde é o texto a ser buscado.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43600986",
+		"_collection_link": "https://matheus-2643429.postman.co/workspace/Matheus's-Workspace~e74cb8d7-7edc-4601-8f60-ad2a49fde34b/collection/43600986-8d391bbb-6408-4385-94b5-088162542b34?action=share&source=collection_link&creator=43600986"
+	},
+	"item": [
+		{
+			"name": "Buscar Operadora por Nome",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/search?q=odontologia",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "odontologia"
+						}
+					]
+				},
+				"description": "Esta requisição busca operadoras cujo nome ou modalidade contenha o termo especificado.\n\n### Parâmetros\n\n- `q`: O termo a ser buscado (ex.: \"odontologia\").\n    \n\n### Exemplo de Uso"
+			},
+			"response": [
+				{
+					"name": "Resultado para busca por nome",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/search?q=odontologia",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"search"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "odontologia"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.1.3 Python/3.12.4"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 31 Mar 2025 04:00:30 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "13301"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"Bairro\": \"VILA ROMANA\",\n        \"CEP\": \"5049000\",\n        \"CNPJ\": \"22869997000153\",\n        \"Cargo_Representante\": \"SÓCIO ADMINISTRADORA\",\n        \"Cidade\": \"São Paulo\",\n        \"Complemento\": \"SALA 126\",\n        \"DDD\": \"11.0\",\n        \"Data_Registro_ANS\": \"2019-06-13\",\n        \"Endereco_eletronico\": \"labmarisol@gmail.com\",\n        \"Fax\": null,\n        \"Logradouro\": \"RUA CATÃO\",\n        \"Modalidade\": \"Odontologia de Grupo\",\n        \"Nome_Fantasia\": null,\n        \"Numero\": \"128\",\n        \"Razao_Social\": \"2B ODONTOLOGIA OPERADORA DE PLANOS ODONTOLÓGICOS LTDA\",\n        \"Regiao_de_Comercializacao\": \"4.0\",\n        \"Registro_ANS\": \"421545\",\n        \"Representante\": \"MARISOL BECHELLI\",\n        \"Telefone\": \"34415852.0\",\n        \"UF\": \"SP\"\n    },\n    {\n        \"Bairro\": \"VILA CLEMENTINO\",\n        \"CEP\": \"4040031\",\n        \"CNPJ\": \"743507000135\",\n        \"Cargo_Representante\": \"DIRETOR\",\n        \"Cidade\": \"São Paulo\",\n        \"Complemento\": \"CONJUNTO 62\",\n        \"DDD\": \"11.0\",\n        \"Data_Registro_ANS\": \"1998-12-21\",\n        \"Endereco_eletronico\": \"alexandre@armodonto.onmicrosoft.com\",\n        \"Fax\": \"35155400.0\",\n        \"Logradouro\": \"RUA LOEFGREEN \",\n        \"Modalidade\": \"Odontologia de Grupo\",\n        \"Nome_Fantasia\": \"ARM ODONTOLOGIA\",\n        \"Numero\": \"1291\",\n        \"Razao_Social\": \"ARM PLANOS ODONTOLÓGICOS LTDA.\",\n        \"Regiao_de_Comercializacao\": \"4.0\",\n        \"Registro_ANS\": \"352152\",\n        \"Representante\": \"ALEXANDRE DE SOUZA MARTINELLI\",\n        \"Telefone\": \"35155400.0\",\n        \"UF\": \"SP\"\n    },\n    {\n        \"Bairro\": \"CAMPO BELO\",\n        \"CEP\": \"4604006\",\n        \"CNPJ\": \"856424000152\",\n        \"Cargo_Representante\": \"DIRETOR \",\n        \"Cidade\": \"São Paulo\",\n        \"Complemento\": \"CJ. 1801\",\n        \"DDD\": null,\n        \"Data_Registro_ANS\": \"1998-12-16\",\n        \"Endereco_eletronico\": \"ans@careplus.com.br\",\n        \"Fax\": null,\n        \"Logradouro\": \"AV. VEREADOR JOSÉ DINIZ\",\n        \"Modalidade\": \"Odontologia de Grupo\",\n        \"Nome_Fantasia\": \"INPAO DENTAL\",\n        \"Numero\": \"3.300\",\n        \"Razao_Social\": \"CARE PLUS ODONTOLOGIA ASSISTENCIAL LTDA.\",\n        \"Regiao_de_Comercializacao\": \"4.0\",\n        \"Registro_ANS\": \"389358\",\n        \"Representante\": \"ROBERTO MILLER MACHADO TORRES\",\n        \"Telefone\": null,\n        \"UF\": \"SP\"\n    },\n    {\n        \"Bairro\": \"JARDIM PROF BENOÁ\",\n        \"CEP\": \"4552060\",\n        \"CNPJ\": \"69099307000198\",\n        \"Cargo_Representante\": \"SOCIO ADMINISTRADOR\",\n        \"Cidade\": \"São Paulo\",\n        \"Complemento\": \"CONJ. 101\",\n        \"DDD\": \"11.0\",\n        \"Data_Registro_ANS\": \"1998-12-24\",\n        \"Endereco_eletronico\": \"crown@crownodonto.com.br\",\n        \"Fax\": \"28132001.0\",\n        \"Logradouro\": \"RUA PEQUETITA\",\n        \"Modalidade\": \"Odontologia de Grupo\",\n        \"Nome_Fantasia\": \"CROWN ODONTOLOGIA DE GRUPO LTDA\",\n        \"Numero\": \"145\",\n        \"Razao_Social\": \"CROWN ODONTOLOGIA DE GRUPO LTDA\",\n        \"Regiao_de_Comercializacao\": \"4.0\",\n        \"Registro_ANS\": \"397245\",\n        \"Representante\": \"WALTER CARMO CORIOLANO JUNIOR\",\n        \"Telefone\": \"28132000.0\",\n        \"UF\": \"SP\"\n    },\n    {\n        \"Bairro\": \"VILA CERCADO GRANDE\",\n        \"CEP\": \"6804180\",\n        \"CNPJ\": \"3113408000168\",\n        \"Cargo_Representante\": \"SOCIO ADMINISTRADOR\",\n        \"Cidade\": \"Embu das Artes\",\n        \"Complemento\": \"SALA 1\",\n        \"DDD\": \"11.0\",\n        \"Data_Registro_ANS\": \"2003-01-13\",\n        \"Endereco_eletronico\": \"oscar@dentsy.com.br\",\n        \"Fax\": null,\n        \"Logradouro\": \"RUA CANDIDO PORTINARI\",\n        \"Modalidade\": \"Odontologia de Grupo\",\n        \"Nome_Fantasia\": \"DENTSY ODONTOLOGIA\",\n        \"Numero\": \"30\",\n        \"Razao_Social\": \"DENTSY ODONTOLOGIA S/S LTDA.\",\n        \"Regiao_de_Comercializacao\": \"4.0\",\n        \"Registro_ANS\": \"414425\",\n        \"Representante\": \"OSCAR COELHO DE OLIVEIRA\",\n        \"Telefone\": \"32842180.0\",\n        \"UF\": \"SP\"\n    },\n    {\n        \"Bairro\": \"MONTE CASTELO\",\n        \"CEP\": \"65030650\",\n        \"CNPJ\": \"7521370000113\",\n        \"Cargo_Representante\": \"DIR TEC SAUDE E ADMINISTRATIVO\",\n        \"Cidade\": \"São Luís\",\n        \"Complemento\": null,\n        \"DDD\": \"98.0\",\n        \"Data_Registro_ANS\": \"2004-10-29\",\n        \"Endereco_eletronico\": \"ioma@elo.com.br\",\n        \"Fax\": \"32310044.0\",\n        \"Logradouro\": \"RUA GENESIO REGO\",\n        \"Modalidade\": \"Odontologia de Grupo\",\n        \"Nome_Fantasia\": \"IOMA\",\n        \"Numero\": \"211\",\n        \"Razao_Social\": \"INSTITUTO DE ODONTOLOGIA DO MARANHÃO LTDA.\",\n        \"Regiao_de_Comercializacao\": \"6.0\",\n        \"Registro_ANS\": \"414981\",\n        \"Representante\": \"WELLINGTON JOSE ALVES NUNES\",\n        \"Telefone\": \"32312101.0\",\n        \"UF\": \"MA\"\n    },\n    {\n        \"Bairro\": \"CENTRO\",\n        \"CEP\": \"14150000\",\n        \"CNPJ\": \"844669000160\",\n        \"Cargo_Representante\": \"SOCIO-DIRETOR GERENTE\",\n        \"Cidade\": \"Serrana\",\n        \"Complemento\": null,\n        \"DDD\": \"1.0\",\n        \"Data_Registro_ANS\": \"1998-12-22\",\n        \"Endereco_eletronico\": \"seato@seato.com.br\",\n        \"Fax\": null,\n        \"Logradouro\": \"RUA VICENTE DE PAULA LIMA\",\n        \"Modalidade\": \"Odontologia de Grupo\",\n        \"Nome_Fantasia\": \"MATTOS ODONTOLOGIA LTDA\",\n        \"Numero\": \"1036\",\n        \"Razao_Social\": \"MATTOS ODONTOLOGIA LTDA\",\n        \"Regiao_de_Comercializacao\": \"6.0\",\n        \"Registro_ANS\": \"329967\",\n        \"Representante\": \"CARLOS CESAR DE MATTOS\",\n        \"Telefone\": \"639873799.0\",\n        \"UF\": \"SP\"\n    },\n    {\n        \"Bairro\": \"JARDIM SUMARÉ\",\n        \"CEP\": \"14025390\",\n        \"CNPJ\": \"1306081000115\",\n        \"Cargo_Representante\": \"DIRETOR GERENTE\",\n        \"Cidade\": \"Ribeirão Preto\",\n        \"Complemento\": null,\n        \"DDD\": \"16.0\",\n        \"Data_Registro_ANS\": \"1998-12-21\",\n        \"Endereco_eletronico\": \"multibucal@multibucal.com.br\",\n        \"Fax\": null,\n        \"Logradouro\": \"AVENIDA INDEPENDÊNCIA \",\n        \"Modalidade\": \"Odontologia de Grupo\",\n        \"Nome_Fantasia\": \"MULTI-BUCAL CONVÊNIO ODONTOLÓGICO\",\n        \"Numero\": \"1339\",\n        \"Razao_Social\": \"MULTI - BUCAL ODONTOLOGIA LTDA - LTDA\",\n        \"Regiao_de_Comercializacao\": \"6.0\",\n        \"Registro_ANS\": \"351351\",\n        \"Representante\": \"ELIAS PACHECO ISSA\",\n        \"Telefone\": \"38774888.0\",\n        \"UF\": \"SP\"\n    },\n    {\n        \"Bairro\": \"BELA VISTA\",\n        \"CEP\": \"1311200\",\n        \"CNPJ\": \"1628329000164\",\n        \"Cargo_Representante\": \"Sócio Administrador\",\n        \"Cidade\": \"São Paulo\",\n        \"Complemento\": \"7º ANDAR, CONJ. 72 - CV 8262\",\n        \"DDD\": \"11.0\",\n        \"Data_Registro_ANS\": \"1999-06-08\",\n        \"Endereco_eletronico\": \"orion@orionodonto.com.br\",\n        \"Fax\": \"44782800.0\",\n        \"Logradouro\": \"AVENIDA PAULISTA\",\n        \"Modalidade\": \"Odontologia de Grupo\",\n        \"Nome_Fantasia\": null,\n        \"Numero\": \"1765\",\n        \"Razao_Social\": \"ORION ODONTOLOGIA LTDA\",\n        \"Regiao_de_Comercializacao\": \"4.0\",\n        \"Registro_ANS\": \"404772\",\n        \"Representante\": \"PAULO CARDONA LICCA\",\n        \"Telefone\": \"44782800.0\",\n        \"UF\": \"SP\"\n    },\n    {\n        \"Bairro\": \"JARDIM SUMARÉ\",\n        \"CEP\": \"14025430\",\n        \"CNPJ\": \"7075561000107\",\n        \"Cargo_Representante\": \"DIRETOR\",\n        \"Cidade\": \"Ribeirão Preto\",\n        \"Complemento\": null,\n        \"DDD\": \"16.0\",\n        \"Data_Registro_ANS\": \"2006-10-25\",\n        \"Endereco_eletronico\": \"atual@atualodontologia.com.br\",\n        \"Fax\": \"39416768.0\",\n        \"Logradouro\": \"RUA MARECHAL RONDON\",\n        \"Modalidade\": \"Odontologia de Grupo\",\n        \"Nome_Fantasia\": \"PARRA ODONTOLOGIA - ATUAL CONVENIO\",\n        \"Numero\": \"150\",\n        \"Razao_Social\": \"PARRA ODONTOLOGIA LTDA\",\n        \"Regiao_de_Comercializacao\": \"6.0\",\n        \"Registro_ANS\": \"415782\",\n        \"Representante\": \"NEWTON BARBOSA PARRA\",\n        \"Telefone\": \"39416768.0\",\n        \"UF\": \"SP\"\n    },\n    {\n        \"Bairro\": \"Setor 05\",\n        \"CEP\": \"76890000\",\n        \"CNPJ\": \"14938785000152\",\n        \"Cargo_Representante\": \"Administrador\",\n        \"Cidade\": \"Jaru\",\n        \"Complemento\": \"Sala A\",\n        \"DDD\": \"69.0\",\n        \"Data_Registro_ANS\": \"2017-01-18\",\n        \"Endereco_eletronico\": \"nhyll_odonto@hotmail.com\",\n        \"Fax\": null,\n        \"Logradouro\": \"Avenida Rio Branco \",\n        \"Modalidade\": \"Odontologia de Grupo\",\n        \"Nome_Fantasia\": \"PASSPORT SYSTEM\",\n        \"Numero\": \"2672\",\n        \"Razao_Social\": \"PASSPORT SYSTEM ODONTOLOGIA LTDA\",\n        \"Regiao_de_Comercializacao\": \"3.0\",\n        \"Registro_ANS\": \"420778\",\n        \"Representante\": \"NILCELIA ANA MARIN\",\n        \"Telefone\": \"35211342.0\",\n        \"UF\": \"RO\"\n    },\n    {\n        \"Bairro\": \"CENTRO\",\n        \"CEP\": \"13835000\",\n        \"CNPJ\": \"3073235000100\",\n        \"Cargo_Representante\": \"ADMINISTRADOR\",\n        \"Cidade\": \"Conchal\",\n        \"Complemento\": \"SALA 2\",\n        \"DDD\": \"19.0\",\n        \"Data_Registro_ANS\": \"1999-04-19\",\n        \"Endereco_eletronico\": \"adm@previnaodonto.com.br\",\n        \"Fax\": \"38661448.0\",\n        \"Logradouro\": \"RUA CAMILO CHAGAS\",\n        \"Modalidade\": \"Odontologia de Grupo\",\n        \"Nome_Fantasia\": \"PREVINA\",\n        \"Numero\": \"275\",\n        \"Razao_Social\": \"PREVINA ODONTOLOGIA LTDA\",\n        \"Regiao_de_Comercializacao\": \"6.0\",\n        \"Registro_ANS\": \"403636\",\n        \"Representante\": \"AUGUSTO RAIMUNDO RIBEIRO\",\n        \"Telefone\": \"38663680.0\",\n        \"UF\": \"SP\"\n    },\n    {\n        \"Bairro\": \"CENTRO\",\n        \"CEP\": \"20040005\",\n        \"CNPJ\": \"8787782000162\",\n        \"Cargo_Representante\": \"SÓCIO GERENTE\",\n        \"Cidade\": \"Rio de Janeiro\",\n        \"Complemento\": \"SALA 2106 A 2111\",\n        \"DDD\": \"21.0\",\n        \"Data_Registro_ANS\": \"2008-01-30\",\n        \"Endereco_eletronico\": \"primavida@primavida.com.br\",\n        \"Fax\": null,\n        \"Logradouro\": \"AVENIDA RIO BRANCO\",\n        \"Modalidade\": \"Odontologia de Grupo\",\n        \"Nome_Fantasia\": \"PRIMA VIDA\",\n        \"Numero\": \"123\",\n        \"Razao_Social\": \"PRIMA VIDA ODONTOLOGIA DE GRUPO LIMITADA\",\n        \"Regiao_de_Comercializacao\": \"3.0\",\n        \"Registro_ANS\": \"416525\",\n        \"Representante\": \"KLÉBER BERNARDES DA SILVA\",\n        \"Telefone\": \"32994501.0\",\n        \"UF\": \"RJ\"\n    },\n    {\n        \"Bairro\": \"JARDIM DOS ESTADOS \",\n        \"CEP\": \"79020250\",\n        \"CNPJ\": \"35365314000172\",\n        \"Cargo_Representante\": \"DIRETOR\",\n        \"Cidade\": \"Campo Grande\",\n        \"Complemento\": null,\n        \"DDD\": \"37.0\",\n        \"Data_Registro_ANS\": \"2020-12-10\",\n        \"Endereco_eletronico\": \"ericsson@proversaude.com.br\",\n        \"Fax\": null,\n        \"Logradouro\": \"RUA DA PAZ\",\n        \"Modalidade\": \"Odontologia de Grupo\",\n        \"Nome_Fantasia\": \"PROVER ODONTO\",\n        \"Numero\": \"483\",\n        \"Razao_Social\": \"PROVER ODONTOLOGIA LTDA\",\n        \"Regiao_de_Comercializacao\": \"3.0\",\n        \"Registro_ANS\": \"422533\",\n        \"Representante\": \"ERICSSON FLAVIO CAVALCANTI\",\n        \"Telefone\": \"34425831.0\",\n        \"UF\": \"MS\"\n    },\n    {\n        \"Bairro\": \"CAMINHO DAS ÁRVORES\",\n        \"CEP\": \"41820020\",\n        \"CNPJ\": \"10456692000130\",\n        \"Cargo_Representante\": \"SOCIO ADMINISTRADOR\",\n        \"Cidade\": \"Salvador\",\n        \"Complemento\": \"Salas 1805 e 1806\",\n        \"DDD\": \"71.0\",\n        \"Data_Registro_ANS\": \"2009-11-25\",\n        \"Endereco_eletronico\": \"danilo@qualidonto.com.br\",\n        \"Fax\": null,\n        \"Logradouro\": \"AV. TANCREDO NEVES\",\n        \"Modalidade\": \"Odontologia de Grupo\",\n        \"Nome_Fantasia\": \"QUALIDONTO\",\n        \"Numero\": \"620\",\n        \"Razao_Social\": \"QUALIDONTO - QUALIDADE EM ODONTOLOGIA LTDA \",\n        \"Regiao_de_Comercializacao\": \"5.0\",\n        \"Registro_ANS\": \"417131\",\n        \"Representante\": \"DANILO AUGUSTO SANTOS CASTRO\",\n        \"Telefone\": \"32762562.0\",\n        \"UF\": \"BA\"\n    },\n    {\n        \"Bairro\": \"CENTRO\",\n        \"CEP\": \"14160180\",\n        \"CNPJ\": \"7154253000169\",\n        \"Cargo_Representante\": \"SOCIO DIRETOR\",\n        \"Cidade\": \"Sertãozinho\",\n        \"Complemento\": null,\n        \"DDD\": \"16.0\",\n        \"Data_Registro_ANS\": \"2005-08-03\",\n        \"Endereco_eletronico\": \"joana.odonto@sermedsaude.com.br\",\n        \"Fax\": null,\n        \"Logradouro\": \"RUA EPITÁCIO PESSOA\",\n        \"Modalidade\": \"Odontologia de Grupo\",\n        \"Nome_Fantasia\": \"SERMED ODONTO\",\n        \"Numero\": \"1.722\",\n        \"Razao_Social\": \"RODRIGUES LEIRA ODONTOLOGIA LTDA.\",\n        \"Regiao_de_Comercializacao\": \"6.0\",\n        \"Registro_ANS\": \"415243\",\n        \"Representante\": \"ANTONIO CATRUNFO LEIRA\",\n        \"Telefone\": \"35111601.0\",\n        \"UF\": \"SP\"\n    },\n    {\n        \"Bairro\": \"VILA CLEMENTINO\",\n        \"CEP\": \"4039020\",\n        \"CNPJ\": \"67989434000137\",\n        \"Cargo_Representante\": \"DIRETOR\",\n        \"Cidade\": \"São Paulo\",\n        \"Complemento\": \"CJ.16\",\n        \"DDD\": \"11.0\",\n        \"Data_Registro_ANS\": \"2006-11-17\",\n        \"Endereco_eletronico\": \"ropeodontologia@terra.com.br\",\n        \"Fax\": \"55791829.0\",\n        \"Logradouro\": \"RUA PEDRO DE TOLEDO\",\n        \"Modalidade\": \"Odontologia de Grupo\",\n        \"Nome_Fantasia\": \"ROPE\",\n        \"Numero\": \"980\",\n        \"Razao_Social\": \"ROPE ODONTOLOGIA ESPECIALIZADA S/S LTDA.\",\n        \"Regiao_de_Comercializacao\": \"4.0\",\n        \"Registro_ANS\": \"415821\",\n        \"Representante\": \"RONALDO PETITI JUNIOR\",\n        \"Telefone\": \"55791829.0\",\n        \"UF\": \"SP\"\n    },\n    {\n        \"Bairro\": \"Cerqueira Cesar\",\n        \"CEP\": \"1419100\",\n        \"CNPJ\": \"19031941000110\",\n        \"Cargo_Representante\": \"ADMINISTRADOR\",\n        \"Cidade\": \"São Paulo\",\n        \"Complemento\": \"11º Andar, Sala 111\",\n        \"DDD\": \"11.0\",\n        \"Data_Registro_ANS\": \"2016-02-03\",\n        \"Endereco_eletronico\": \"ricardo.queiroz@bluemedsaude.com.br\",\n        \"Fax\": null,\n        \"Logradouro\": \"Alameda Santos\",\n        \"Modalidade\": \"Odontologia de Grupo\",\n        \"Nome_Fantasia\": \"SMARTCARE ODONTOLOGIA\",\n        \"Numero\": \"1827\",\n        \"Razao_Social\": \"SMART CARE SISTEMAS MÉDICOS E ODONTOLÓGICOS LTDA.\",\n        \"Regiao_de_Comercializacao\": \"5.0\",\n        \"Registro_ANS\": \"420051\",\n        \"Representante\": \"RICARDO GUIMARÃES DE QUEIROZ\",\n        \"Telefone\": \"30169402.0\",\n        \"UF\": \"SP\"\n    },\n    {\n        \"Bairro\": \"VILA CLEMENTINO\",\n        \"CEP\": \"4038000\",\n        \"CNPJ\": \"7898011000180\",\n        \"Cargo_Representante\": \"SÓCIO\",\n        \"Cidade\": \"São Paulo\",\n        \"Complemento\": null,\n        \"DDD\": \"11.0\",\n        \"Data_Registro_ANS\": \"2007-07-11\",\n        \"Endereco_eletronico\": null,\n        \"Fax\": \"50812909.0\",\n        \"Logradouro\": \"RUA BORGES LAGOA\",\n        \"Modalidade\": \"Odontologia de Grupo\",\n        \"Nome_Fantasia\": null,\n        \"Numero\": \"314\",\n        \"Razao_Social\": \"TOP DOCTOR'S ODONTOLOGIA LTDA\",\n        \"Regiao_de_Comercializacao\": \"4.0\",\n        \"Registro_ANS\": \"416193\",\n        \"Representante\": \"RODRIGO VILELA\",\n        \"Telefone\": \"22151538.0\",\n        \"UF\": \"SP\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Buscar Operadora por CNPJ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/search?q=19541931000125",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "19541931000125"
+						}
+					]
+				},
+				"description": "Esta requisição busca operadoras cujo cnpj contenha o termo especificado.\n\n### Parâmetros\n\n- `q`: O termo a ser buscado (ex.: \"19541931000125\").\n    \n\n### Exemplo de Uso"
+			},
+			"response": [
+				{
+					"name": "Resultado para busca po CNPJ",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/search?q=19541931000125",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"search"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "19541931000125"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.1.3 Python/3.12.4"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 31 Mar 2025 04:01:03 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "778"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"Bairro\": \"PRAÇA DA BANDEIRA\",\n        \"CEP\": \"36660000\",\n        \"CNPJ\": \"19541931000125\",\n        \"Cargo_Representante\": \"SÓCIO ADMINISTRADOR\",\n        \"Cidade\": \"Além Paraíba\",\n        \"Complemento\": null,\n        \"DDD\": \"32.0\",\n        \"Data_Registro_ANS\": \"2015-05-19\",\n        \"Endereco_eletronico\": \"contabilidade@cbnassessoria.com.br\",\n        \"Fax\": null,\n        \"Logradouro\": \"RUA CAPITÃO MEDEIROS DE REZENDE\",\n        \"Modalidade\": \"Administradora de Benefícios\",\n        \"Nome_Fantasia\": null,\n        \"Numero\": \"274\",\n        \"Razao_Social\": \"18 DE JULHO ADMINISTRADORA DE BENEFÍCIOS LTDA\",\n        \"Regiao_de_Comercializacao\": \"6.0\",\n        \"Registro_ANS\": \"419761\",\n        \"Representante\": \"LUIZ HENRIQUE MARENDINO GONÇALVES\",\n        \"Telefone\": \"34624649.0\",\n        \"UF\": \"MG\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Buscar Operadora com Termo Inexistente",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/search?q=termoinexistente",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "termoinexistente"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Resultado para busca com termo inexistente",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/search?q=termoinexistente",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"search"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "termoinexistente"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.1.3 Python/3.12.4"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 31 Mar 2025 04:01:38 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "3"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "[]"
+				}
+			]
+		},
+		{
+			"name": "Buscar Sem Parâmetro",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/search?q=",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Resultado para busca sem parâmetro",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/search?q=",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"search"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": ""
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.1.3 Python/3.12.4"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 31 Mar 2025 04:02:27 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "3"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "[]"
+				}
+			]
+		}
+	]
+}
